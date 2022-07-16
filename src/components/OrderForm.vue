@@ -152,34 +152,23 @@ export default {
       margin-top: 80px;
       position: relative;
 
-        &::after {
-          content: "";
-          position: absolute;
-          width: 68%;
-          height: 6px;
-          left: 0;
-          right: 0;
-          bottom: 62%;
-          margin: auto;
-          background: url('../assets/cirlce.png') center no-repeat;
-          background-size: contain;
-        }
+      @media (max-width: 768px) {
+        display: none;
+      }
 
-      // &::after {
-      //   content: '';
-      //   background-image: radial-gradient(ellipse, #C4C4C4 3px, transparent 0);
-      //   background-size: 20px 20px;
-      //   background-repeat: repeat;
-      //   width: 80%;
-      //   height: 20px;
-      //   left: 0;
-      //   right: 0;
-      //   bottom: 62%;
-      //   margin: auto;
-      //   position: absolute;
-      // }
-      
-      
+      &::after {
+        content: "";
+        position: absolute;
+        width: 68%;
+        height: 6px;
+        left: 0;
+        right: 0;
+        bottom: 62%;
+        margin: auto;
+        background: url('../assets/cirlce.png') center no-repeat;
+        background-size: contain;
+      }
+
       &__item {
         display: flex;
         flex-direction: column;
@@ -200,12 +189,6 @@ export default {
           display: flex;
           justify-content: center;
           align-items: center;
-          
-          // @media (max-width: var(--table-breakpoint)) {
-          //   width: 5rem;
-          //   height: 5rem;
-          //   background: red;
-          // }
         }
         &__txt {
           margin-top: 20px;
@@ -219,9 +202,9 @@ export default {
       flex-wrap: wrap;
       margin-top: 80px;
 
-      // @include for-phone {    
-      //   flex-direction: column;
-      // }
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
 
       &__item {
         width: 32%;
@@ -230,13 +213,24 @@ export default {
         line-height: 22px;
         color: #272733;
 
+        @media (max-width: 768px) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
         &:nth-child(4) {
           width: 66%;
           margin-top: 30px;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
         }
         &:nth-child(5) {
           margin-top: 30px;
           width: 32%;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
         }
 
         input, select {
