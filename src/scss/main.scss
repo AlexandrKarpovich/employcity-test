@@ -1,42 +1,11 @@
-// :root {
-    // media
-    
-
-    // color
-    // --accent-color-wrong: $accent-color; 
-// }
-
-// media mixin
-// @mixin devices ($breakpoint) {
-  
-//     @if $breakpoint == tablet {    
-//     @media (max-width: 768px) {
-//       @content;
-//     }
-//   }
- 
-//   @if $breakpoint == mobile {
-//     @media (max-width: 481px) {
-//       @content;
-//     }
-//   }
-// }
-
-// @mixin for-phone {
-//     @media (max-width: 481px) { @content; }
-// }
-// @mixin for-tablet {
-//     @media (min-width: 768px) { @content; }
-// }
-
 html {
     font-size: 13px;
-    // @media (max-width: var(--table-breakpoint)) {
-    //     font-size: 12px;
-    // }
-    // @media (max-width: var(--mobile-breakpoint)) {
-    //     font-size: 11px;
-    // }
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+    @media (max-width: 481px) {
+        font-size: 11px;
+    }
 }
 
 .main {
