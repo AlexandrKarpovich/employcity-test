@@ -1,10 +1,25 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="wrapper">
+    <HeaderTop />
+    <div class="main">
+      <router-view/>
+    </div>
+    <FooterLine />
+  </div>
 </template>
+
+
+<script>
+import HeaderTop from './components/HeaderTop.vue'
+import FooterLine from './components/FooterLine.vue'
+export default {
+  name: 'App',
+  components: {
+    HeaderTop,
+    FooterLine
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
