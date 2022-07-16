@@ -12,6 +12,7 @@
 <script>
 import HeaderTop from './components/HeaderTop.vue'
 import FooterLine from './components/FooterLine.vue'
+
 export default {
   name: 'App',
   components: {

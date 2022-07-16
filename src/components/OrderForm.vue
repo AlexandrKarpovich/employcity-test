@@ -53,33 +53,19 @@
         
         <div class="form">
           <div class="form__item">
-            <!-- <select name="select" id="system" class="select">
-              <option value="" selected disabled hidden>Выберите тип системы:</option>
-              <option value="sys1">Sed ut perspiciatis</option>
-              <option value="sys2">Nemo enim ipsam</option>
-              <option value="sys3">Et harum quidem</option>
-              <option value="sys4">Temporibus autem</option>
-              <option value="sys4">Itaque earum rerum</option>
-            </select> -->
-
-
-            <div class="custom-select" style="width:200px;">
-              <select>
-                <option value="0">Select car:</option>
-                <option value="1">Audi</option>
-                <option value="2">BMW</option>
-                <option value="3">Citroen</option>
-                <option value="4">Ford</option>
-                <option value="5">Honda</option>
-                <option value="6">Jaguar</option>
-                <option value="7">Land Rover</option>
-                <option value="8">Mercedes</option>
-                <option value="9">Mini</option>
-                <option value="10">Nissan</option>
-                <option value="11">Toyota</option>
-                <option value="12">Volvo</option>
-              </select>
-            </div>
+            <CustomSelect
+                :options="[
+                  'Sed ut perspiciatis', 
+                  'Nemo enim ipsam', 
+                  'Et harum quidem', 
+                  'Temporibus autem',
+                  'Itaque earum rerum',
+                  'Itaque earum rerum',
+                  'Itaque earum rerum'
+                ]"
+                :default="'Выберите тип системы:'"
+                class="select"
+              />
 
           </div>
           <div class="form__item">
@@ -118,20 +104,20 @@
 </template>
 
 <script>
-
+import CustomSelect from "../components/CustomSelect.vue";
 export default {
   name: 'OrderForm',
   components: {
-    
+    CustomSelect
   },
   data() {
     return {
-      range: 30
+      range: 75
     }
   },
   computed: {
     // progresRange() {
-    //   return Date.now()
+    //   return 
     // }
   }
 }
@@ -215,11 +201,11 @@ export default {
           justify-content: center;
           align-items: center;
           
-          @media (max-width: var(--table-breakpoint)) {
-            width: 5rem;
-            height: 5rem;
-            background: red;
-          }
+          // @media (max-width: var(--table-breakpoint)) {
+          //   width: 5rem;
+          //   height: 5rem;
+          //   background: red;
+          // }
         }
         &__txt {
           margin-top: 20px;
@@ -264,64 +250,6 @@ export default {
           box-sizing: border-box;
         }
       }
-
-     
-      .custom-select {
-        position: relative;
-        font-family: Arial;
-      }
-      .custom-select select {
-        display: none; /*hide original SELECT element: */
-      }
-      .select-selected {
-        background-color: DodgerBlue;
-      }
-      /* Style the arrow inside the select element: */
-      .select-selected:after {
-        position: absolute;
-        content: "";
-        top: 14px;
-        right: 10px;
-        width: 0;
-        height: 0;
-        border: 6px solid transparent;
-        border-color: #fff transparent transparent transparent;
-      }
-
-      /* Point the arrow upwards when the select box is open (active): */
-      .select-selected.select-arrow-active:after {
-        border-color: transparent transparent #fff transparent;
-        top: 7px;
-      }
-
-      /* style the items (options), including the selected item: */
-      .select-items div,.select-selected {
-        color: #ffffff;
-        padding: 8px 16px;
-        border: 1px solid transparent;
-        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-        cursor: pointer;
-      }
-
-      /* Style items (options): */
-      .select-items {
-        position: absolute;
-        background-color: DodgerBlue;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 99;
-      }
-
-      /* Hide the items when the select box is closed: */
-      .select-hide {
-        display: none;
-      }
-
-      .select-items div:hover, .same-as-selected {
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-
 
 
 

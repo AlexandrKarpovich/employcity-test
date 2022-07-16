@@ -57,3 +57,23 @@ body {
 a {
     text-decoration: none;
 }
+
+// custom scroll bar
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #3D4050;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #43ABF0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5fa3d0;
+}
