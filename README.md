@@ -22,4 +22,4 @@ https://www.figma.com/file/Jrw6yvrpmCRF7dhiXT0421/Тестовое?nodeid=0%3A1&
 12. Допускается использование сторонних плагинов для стилизации элементов, если это необходимо
 13. Выполненное тестовое задание должно быть загружено на github со страницей на github pages
 
-![Image alt](https://github.com/AlexandrKarpovich/employcity-test/blob/master/public/demo.jpg)
+![Image alt](https://github.com/AlexandrKarpovich/employcity-test/blob/master/src/assets/demo.jpg)
