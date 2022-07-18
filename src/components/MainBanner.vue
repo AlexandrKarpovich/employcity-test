@@ -41,7 +41,7 @@ export default {
 <style lang="scss">
   .banner {
     width: 100%;
-    background: url('../assets/banner.jpeg') top center no-repeat;
+    background: url('../assets/banner.jpeg') right no-repeat;
     background-size: cover;
     &__inner {
       padding: 203px 0;
@@ -70,11 +70,27 @@ export default {
       }
       &__descr {
         margin-bottom: 80px;
+        padding-left: 25px;
         &__item {
           font-weight: 400;
           font-size: 20px;
           line-height: 24px;
           color: #000000;
+          list-style-type: none;
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 50%;
+            left: -14px;
+            width: 4.94px;
+            height: 1.51px;
+            background: #000000;
+            display: flex;
+            align-items: center;
+
+          }
         }
       }
     }

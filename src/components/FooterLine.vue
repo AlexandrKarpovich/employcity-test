@@ -80,8 +80,19 @@ export default {
       flex-wrap: wrap;
       max-width: 464px;
       width: 100%;
-      padding: 10px 42px;
+      padding: 10px 40px;
       box-sizing: border-box;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 35%;
+        width: 1px;
+        height: 18px;
+        background: #C3C3C3;
+      }
 
       &__item {
         display: flex;
@@ -108,6 +119,17 @@ export default {
       width: 100%;
       padding-left: 35px;
       box-sizing: border-box;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 35%;
+        width: 1px;
+        height: 18px;
+        background: #C3C3C3;
+      }
 
       &__item {
         font-weight: 400;

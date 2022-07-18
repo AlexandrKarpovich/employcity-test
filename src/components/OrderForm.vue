@@ -242,6 +242,10 @@ export default {
           width: 100%;
           max-width: 370px;
           box-sizing: border-box;
+
+          @media (max-width: 768px) {
+            max-width: 100%;
+          }
         }
       }
 
@@ -271,6 +275,10 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: 768px) {
+          margin: auto;
+        }
 
         svg {
           margin-right: 10px;
