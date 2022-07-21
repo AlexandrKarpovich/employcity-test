@@ -41,8 +41,12 @@ export default {
 <style lang="scss">
   .banner {
     width: 100%;
-    background: url('../assets/banner.jpeg') right no-repeat;
+    background: url('../assets/banner.jpeg') center no-repeat;
     background-size: cover;
+
+    @media (max-width: 768px) {
+      background: url('../assets/banner.jpeg') right no-repeat;
+    }
     &__inner {
       padding: 203px 0;
       text-align: left;
@@ -59,6 +63,9 @@ export default {
 
       &__color {
         color: #000000;
+        @media (max-width: 768px) {
+          color: #FFFFFF;
+        }
       }
     }
     .list {
@@ -67,6 +74,10 @@ export default {
         font-size: 20px;
         line-height: 24px;
         color: #000000;
+
+        @media (max-width: 768px) {
+          color: #FFFFFF;
+        }
       }
       &__descr {
         margin-bottom: 80px;
@@ -79,6 +90,10 @@ export default {
           list-style-type: none;
           position: relative;
 
+          @media (max-width: 768px) {
+            color: #FFFFFF;
+          }
+
           &:after {
             content: "";
             position: absolute;
@@ -89,6 +104,10 @@ export default {
             background: #000000;
             display: flex;
             align-items: center;
+
+            @media (max-width: 768px) {
+              background: #FFFFFF;
+            }
 
           }
         }
